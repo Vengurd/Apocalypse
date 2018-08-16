@@ -1,0 +1,37 @@
+
+state={
+	id=766
+	name="STATE_766"
+	manpower = 953785
+	state_category=town
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 6
+			12211 = {
+				naval_base = 3
+
+			}
+
+		}
+		add_core_of = USA
+		add_core_of = CAS
+		victory_points = {
+			4328 1 #Corvalis
+		}
+		victory_points = {
+			10183 5 #Astoria
+		}
+		victory_points = {
+			12211 1 #Beaverton
+		}
+
+	}
+
+	provinces={
+		 4380 10183 12211 
+	}
+}

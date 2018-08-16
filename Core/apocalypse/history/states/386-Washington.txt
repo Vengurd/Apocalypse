@@ -1,0 +1,39 @@
+
+state={
+	id=386
+	name="STATE_386"
+	manpower = 1563395
+	
+	state_category = large_town
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+			air_base = 5
+			7315 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = USA
+		victory_points = {
+			1690 1 #Spokane
+		}
+		victory_points = {
+			7315 10 #Seattle
+		}
+		victory_points = {
+			7386 40 #Olympia
+		}
+		victory_points = {
+			10271 1 #Vancourver
+		}
+	}
+
+	provinces={
+		1320 7255 7315 7414 7442 10155 10157 10198 10687 10690 12155 12214 
+	}
+}

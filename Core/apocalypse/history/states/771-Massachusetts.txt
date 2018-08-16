@@ -1,0 +1,25 @@
+state={
+	id=771
+	name="STATE_771"
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 7
+			arms_factory = 1
+			industrial_complex = 2
+			dockyard = 2
+			air_base = 7
+
+		}
+		victory_points = {
+			6732 20 
+		}
+		add_core_of  = USA
+	}
+
+	provinces={
+		715 718 905 908 3710 3906 6732 
+	}
+	manpower=4355000
+	state_category=metropolis
+}

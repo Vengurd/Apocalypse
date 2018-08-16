@@ -1,0 +1,23 @@
+
+state={
+	id=773
+	name="STATE_773"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 7
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 7
+
+		}
+		add_core_of = USA
+
+	}
+	provinces={
+		4445 7629 9675 
+	}
+	manpower=357000
+	state_category=metropolis
+}

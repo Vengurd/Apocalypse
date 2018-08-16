@@ -1,0 +1,28 @@
+
+state={
+	id=767
+	name="STATE_767"
+	manpower = 1563395
+	
+	state_category = large_town
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+			air_base = 5
+		}
+		add_core_of = USA
+        add_core_of = CAS
+		victory_points = {
+			1690 10 #Spokane
+		}
+	}
+
+	provinces={
+		1690 4747 10327 10693 12673 
+	}
+}

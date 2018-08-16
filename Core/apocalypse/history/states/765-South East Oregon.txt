@@ -1,0 +1,30 @@
+
+state={
+	id=765
+	name="STATE_765"
+	manpower = 953785
+	state_category=rural
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 6
+
+		}
+		add_core_of = USA
+		add_core_of = CAS
+		victory_points = {
+			4347 20 #Klamath Falls
+		}
+		victory_points = {
+			10305 10 #Lake View
+		}
+
+	}
+
+	provinces={
+		4347 7721 10305 10625 
+	}
+}
