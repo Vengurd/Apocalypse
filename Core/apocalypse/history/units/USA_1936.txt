@@ -1,0 +1,362 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Infantry Division"  	# Standard formation for frontline divisions
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  # US Hvy Field Arty consisted of 2 Bns, 155mm howitzers
+		engineer = { x = 0 y = 1 }   # US Eng Rgt consisted of 2 Bns
+	}
+}
+division_template = {
+	name = "National Guard Division"  	# Standard formation for NG divisions through late 1940
+
+	regiments = {						
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  # US Hvy Field Arty consisted of 2 Bns, 155mm howitzers
+		engineer = { x = 0 y = 1 }   # US Eng Rgt consisted of 2 Bns
+	}
+}
+division_template = {
+	name = "Cavalry Division"  		# 1st Cavalry Division only
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # US Cav Recon consisted of 52 ACs, 13 L Arm
+		engineer = { x = 0 y = 1 }   # US Eng Bn
+	}
+}
+division_template = {
+	name = "Garrison Brigade"  		# used for island defense (older equipment, lower experience)
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+	priority = 0
+}
+
+###### OOB ######
+units = {
+	### 1st Army -- note: Armies only paper organizations in 1936 ###
+	# I Army Corps #
+	division= {			
+		name = "26th 'Yankee' Division"		
+		location = 6732
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}			
+	division= {			
+		name = "43rd 'Winged Victory' Division"		
+		location = 6732
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	# II Army Corps #
+	division= {			
+		name = "1st 'Big Red One' Division"		
+		location = 3878
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}			
+	division= {			
+		name = "27th 'New York' Division"		
+		location = 3878
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}			
+	division= {			
+		name = "44th Infantry Division"		
+		location = 3878
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}			
+	# III Army Corps #
+	division= {			
+		name = "28th 'Keystone' Division"		
+		location = 6984
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}			
+	division= {			
+		name = "29th 'Blue and Gray' Division"		
+		location = 6984
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}			
+
+
+	### 2nd Army -- note: Armies only paper organizations in 1936 ###
+	# V Army Corps #
+	division= {			
+		name = "37th 'Buckeye' Division"		
+		location = 6855
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}			
+	division= {			
+		name = "38th 'Cyclone' Division"		
+		location = 6855
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}			
+	# VI Army Corps #
+	division= {			
+		name = "32nd 'Red Arrow' Division"		
+		location = 9450
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}			
+	division= {			
+		name = "33rd 'Golden Cross' Division"		
+		location = 9450
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	##### Royal Canadian Army #####
+	## 1st Miltary District ##
+	division= {	
+		name = "1st District Militia"
+		location = 722 # London ONT
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	## 2nd Miltary District ##
+	division= {	
+		name = "2nd District Militia"
+		location = 3775 # Toronto
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "2nd District Cavalry"
+		location = 3775 # Toronto
+		division_template = "Cavalry Division" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	## 3rd Miltary District ##
+	division= {	
+		name = "3rd District Militia"
+		location = 3605 # Kingston ONT
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	## 4th Miltary District ##
+	division= {	
+		name = "4th District Militia"
+		location = 4345 # Montreal
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "4th District Cavalry"
+		location = 4345 # Montreal
+		division_template = "National Guard Division" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	## 5th Miltary District ##
+	division= {	
+		name = "5th District Militia"
+		location = 12149 # Quebec City
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	## 6th Miltary District ##
+	division= {	
+		name = "6th District Militia"
+		location = 7361  # Halifax
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	## 7th Miltary District ##
+	division= {	
+		name = "7th District Militia"
+		location = 4285 # St Johns
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}			
+
+
+	##### NAVAL UNITS #####
+	navy = {				
+		name = "Atlantic Squadron"			
+		base = 7361 
+		location = 7361 # Halifax
+		# Scrap Iron Flotilla
+		ship = { name = "HMCS Saguenay" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Farragut Class" } } }
+		ship = { name = "HMCS Skeena" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Farragut Class" } } }
+	}				
+}
+		
+air_wings = {
+### Royal Canadian Air Force (RCAF)-- New South Wales
+	276 = {
+		# RCAF Station Trenton (ONT) -- Westland Wapitis
+		nav_bomber_equipment_1 =  {
+			owner = "USA" 
+			amount = 24
+		}
+	}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+		
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "USA"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "USA" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "USA" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = cv_fighter_equipment_0
+			creator = "USA" 
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+	}
+
+	### Under Construction Notes ###
+	# DD: Mahan class (x13) ("USS Porter" "USS Phelps" "USS Clark" "USS Moffett" "USS Mahan" "USS Cummings" "USS Flusser" "USS Case" "USS Conyngham" "USS Cassin" "USS Shaw" "USS Cushing" "USS Perkins")
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_1
+			creator = "USA"
+			version_name = "Farragut Class"
+		}
+		requested_factories = 13
+		progress = 0.80
+		amount = 13
+	}
+	# SS: Porpoise class (x1) ("USS Tarpon")
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "USA"
+		}
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+	}
+	# CA: Quincy (New Orleans class, Comm. 9-Jun, 1936)
+	add_equipment_production = {
+		equipment = {
+			type = heavy_cruiser_1
+			creator = "USA"
+			version_name = "Portland Class"
+		}
+		requested_factories = 2
+		progress = 0.85
+		amount = 1
+	}
+}
+#####################
