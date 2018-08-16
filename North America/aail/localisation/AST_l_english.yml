@@ -1,0 +1,17 @@
+﻿l_english:
+###Nations and such###
+ 
+ AST_fascism:0 "Free Native Empire"
+ AST_fascism_DEF:0 "The Free Native Empire"
+ AST_democratic:0 "Native States"
+ AST_democratic_DEF:0 "The Native States"
+ AST_neutrality:0 "Native American Domain"
+ AST_neutrality_DEF:0 "The Native American Domain"
+ AST_communism:0 "Native American Union"
+ AST_communism_DEF:0 "The Native American Union"
+ AST_fascism_ADJ:0 "Native American"
+ AST_democratic_ADJ:0 "Native American"
+ AST_neutrality_ADJ:0 "Native American"
+ AST_communism_ADJ:0 "Native American"
+###Leaders###
+ #POLITICS_??????????_DESC:0 "Chief"
