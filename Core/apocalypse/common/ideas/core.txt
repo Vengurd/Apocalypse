@@ -1,0 +1,24 @@
+ideas = {
+	country = {
+		america_devided = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 1
+				consumer_goods_factor = 0.2
+				conscription_factor = -0.2
+				join_faction_tension = 0.20
+			}
+		}
+    }
+}
