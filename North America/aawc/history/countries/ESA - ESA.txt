@@ -1,6 +1,6 @@
 ﻿capital = 378
 
-oob = "EAS_1936"
+oob = "ESA_1936"
 
 set_research_slots = 4
 
@@ -208,20 +208,23 @@ if = {
 
 		parties = {
 			democratic = { 
-				popularity = 29
+				popularity = 27
 			}
 
 			fascism = {
-				popularity = 39
+				popularity = 22
 			}
 			
 			communism = {
-				popularity = 22
+				popularity = 39
 				#banned = no #default is no
 			}
+            neutrality = { 
+                popularity = 2
+            }
 		}
 		
-		ruling_party = fascism
+		ruling_party = communism
 		last_election = "1932.11.3"
 		election_frequency = 48
 		elections_allowed = no

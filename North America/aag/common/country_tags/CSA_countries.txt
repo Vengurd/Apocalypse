@@ -1,0 +1,1 @@
+﻿CSA = "countries/CSA.txt"
