@@ -1,5 +1,5 @@
 name="Apocalypse: California"
-path="mod/dusa/"
+path="mod/aawc/"
 dependencies={
 	"Apocalypse - Core"
 }
