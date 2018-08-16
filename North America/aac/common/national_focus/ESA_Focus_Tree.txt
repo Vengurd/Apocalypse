@@ -1,0 +1,2763 @@
+focus_tree = {
+	id = EAS_Focus_Tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ESA
+		}
+	}
+	default = no
+	focus = {
+		id = westcoast_rule_0
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 5.00
+		x = 7
+		y = 0
+			ai_will_do = {
+					factor = 70
+				}
+			completion_reward = {
+					add_political_power = 80
+				}
+
+	}
+	focus = {
+		id = political_address_1
+		icon = GFX_goal_generic_demand_territory
+		cost = 5.00
+		x = 41
+		y = 0
+			ai_will_do = {
+					factor = 80
+				}
+			completion_reward = {
+					add_political_power = 120
+				}
+
+	}
+	focus = {
+		id = the_west_united_122
+		icon = GFX_goal_unknown
+		cost = 10.00
+		x = 30
+		y = 16
+			completion_reward = {
+					remove_ideas = america_devided
+				}
+
+	}
+	focus = {
+		id = prepare_the_islands_5
+		icon = GFX_goal_continuous_naval_production
+		cost = 8.00
+		prerequisite = {
+			focus = westcoast_rule_0
+		}
+		x = 3
+		y = 1
+			ai_will_do = {
+					factor = 35
+				}
+			completion_reward = {
+					add_ideas = deterrence
+				}
+
+	}
+	focus = {
+		id = plan_against_japan_45
+		icon = GFX_focus_AST_war_japan
+		cost = 7.00
+		prerequisite = {
+			focus = prepare_the_islands_5
+		}
+		mutually_exclusive = {
+			focus = forsight_a_japense_offensive_44
+		}
+		x = 2
+		y = 2
+			ai_will_do = {
+					factor = 80
+				}
+			completion_reward = {
+					add_extra_state_shared_building_slots = 1
+					629 = {
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = support_the_island_highways_46
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 9.00
+		prerequisite = {
+			focus = plan_against_japan_45
+		}
+		x = 2
+		y = 3
+			ai_will_do = {
+					factor = 60
+				}
+			completion_reward = {
+					629 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+					631 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+					630 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+					632 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 4
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = improve_infantry_capibilities_47
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		cost = 8.00
+		prerequisite = {
+			focus = support_the_island_highways_46
+		}
+		x = 2
+		y = 4
+			ai_will_do = {
+					factor = 70
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = strengthen_pearl_harbor_54
+		icon = GFX_goal_continuous_naval_production
+		cost = 10.00
+		prerequisite = {
+			focus = improve_infantry_capibilities_47
+		}
+		x = 0
+		y = 5
+			ai_will_do = {
+					factor = 30
+				}
+			completion_reward = {
+					629 = {
+							add_building_construction = {
+									type = coastal_bunker
+									level = 2
+									province = 4180
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = create_more_supply_lines_55
+		icon = GFX_goal_generic_position_armies
+		cost = 6.00
+		prerequisite = {
+			focus = improve_infantry_capibilities_47
+		}
+		x = 2
+		y = 5
+			ai_will_do = {
+					factor = 50
+				}
+			completion_reward = {
+					378 = {
+							add_building_construction = {
+									type = naval_base
+									province = 9814
+									level = 5
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = strive_for_naval_supremacy_58
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = strengthen_pearl_harbor_54
+			focus = create_more_supply_lines_55
+		}
+		x = 1
+		y = 6
+			ai_will_do = {
+					factor = 70
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = USA_fund_the_navy
+							uses = 3
+							bonus = 0.5
+							category = naval_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = forsight_a_japense_offensive_44
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 7.00
+		prerequisite = {
+			focus = prepare_the_islands_5
+		}
+		mutually_exclusive = {
+			focus = plan_against_japan_45
+		}
+		x = 4
+		y = 2
+			ai_will_do = {
+					factor = 30
+				}
+			completion_reward = {
+					add_extra_state_shared_building_slots = 1
+					629 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = strengthen_island_defenses_52
+		icon = GFX_focus_generic_coastal_fort
+		cost = 10.00
+		prerequisite = {
+			focus = forsight_a_japense_offensive_44
+		}
+		x = 4
+		y = 3
+			ai_will_do = {
+					factor = 70
+				}
+			completion_reward = {
+					629 = {
+							add_building_construction = {
+									type = coastal_bunker
+									level = 2
+									instant_build = yes
+								}
+						}
+					631 = {
+							add_building_construction = {
+									type = coastal_bunker
+									level = 2
+									instant_build = yes
+								}
+						}
+					630 = {
+							add_building_construction = {
+									type = coastal_bunker
+									level = 2
+									instant_build = yes
+								}
+						}
+					632 = {
+							add_building_construction = {
+									type = coastal_bunker
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = protect_pearl_harbor_53
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = strengthen_island_defenses_52
+		}
+		x = 4
+		y = 4
+			ai_will_do = {
+					factor = 40
+				}
+			completion_reward = {
+					629 = {
+							add_building_construction = {
+									type = coastal_bunker
+									level = 6
+									province = 4180
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = strive_for_air_supremacy_56
+		icon = GFX_goal_generic_air_fighter2
+		cost = 7.00
+		prerequisite = {
+			focus = protect_pearl_harbor_53
+		}
+		x = 4
+		y = 5
+			ai_will_do = {
+					factor = 50
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = USA_fund_the_navy
+							uses = 3
+							bonus = 0.5
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = american_threat_6
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 5.00
+		prerequisite = {
+			focus = westcoast_rule_0
+		}
+		x = 7
+		y = 1
+			ai_will_do = {
+					factor = 50
+				}
+			completion_reward = {
+					add_political_power = 20
+				}
+
+	}
+	focus = {
+		id = strive_towards_better_military_37
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 6.00
+		prerequisite = {
+			focus = american_threat_6
+		}
+		x = 6
+		y = 2
+			ai_will_do = {
+					factor = 90
+				}
+			completion_reward = {
+					army_experience = 5
+				}
+
+	}
+	focus = {
+		id = improve_american_military_industry_37
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 7.00
+		prerequisite = {
+			focus = strive_towards_better_military_37
+		}
+		mutually_exclusive = {
+			focus = american_protection_plans_36
+		}
+		x = 6
+		y = 3
+			ai_will_do = {
+					factor = 80
+				}
+			completion_reward = {
+					473 = {
+							add_building_construction = {
+									type = arms_factory
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = secret_military_techniques_40
+		icon = GFX_focus_generic_little_entente
+		cost = 8.00
+		prerequisite = {
+			focus = improve_american_military_industry_37
+		}
+		x = 6
+		y = 4
+			ai_will_do = {
+					factor = 70
+				}
+			completion_reward = {
+					army_experience = 20
+					add_ideas = military_techniques_focus
+				}
+
+	}
+	focus = {
+		id = steal_german_infantry_technology_43
+		icon = GFX_goal_rhineland
+		cost = 8.00
+		prerequisite = {
+			focus = secret_military_techniques_40
+		}
+		x = 6
+		y = 5
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = keep_new_technolgy_49
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = steal_german_infantry_technology_43
+		}
+		mutually_exclusive = {
+			focus = share_german_infantry_technolgy_with_the_allies48
+		}
+		x = 5
+		y = 6
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = share_german_infantry_technolgy_with_the_allies48
+		icon = GFX_goal_support_democracy
+		cost = 6.00
+		prerequisite = {
+			focus = steal_german_infantry_technology_43
+		}
+		mutually_exclusive = {
+			focus = keep_new_technolgy_49
+		}
+		x = 7
+		y = 6
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = share_with_the_comitern_50
+		icon = GFX_goal_support_communism
+		cost = 5.00
+		prerequisite = {
+			focus = share_german_infantry_technolgy_with_the_allies48
+		}
+		x = 6
+		y = 7
+			ai_will_do = {
+					factor = 20
+				}
+
+	}
+	focus = {
+		id = fordify_against_americans_35
+		icon = GFX_goal_generic_fortify_city
+		cost = 6.00
+		prerequisite = {
+			focus = american_threat_6
+		}
+		x = 8
+		y = 2
+
+	}
+	focus = {
+		id = american_protection_plans_36
+		icon = GFX_goal_generic_military_sphere
+		cost = 5.00
+		prerequisite = {
+			focus = fordify_against_americans_35
+		}
+		mutually_exclusive = {
+			focus = improve_american_military_industry_37
+		}
+		x = 8
+		y = 3
+
+	}
+	focus = {
+		id = defend_united_border_38
+		icon = GFX_goal_generic_political_pressure
+		cost = 8.00
+		prerequisite = {
+			focus = american_protection_plans_36
+		}
+		x = 8
+		y = 4
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = defend_the_coast_42
+		icon = GFX_focus_generic_coastal_fort
+		cost = 7.00
+		prerequisite = {
+			focus = defend_united_border_38
+		}
+		x = 8
+		y = 5
+			ai_will_do = {
+					factor = 40
+				}
+
+	}
+	focus = {
+		id = share_with_america_51
+		icon = GFX_goal_continuous_boost_freedom
+		cost = 5.00
+		prerequisite = {
+			focus = share_german_infantry_technolgy_with_the_allies48
+		}
+		x = 8
+		y = 7
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = defend_confederate_border_39
+		icon = GFX_goal_generic_political_pressure
+		cost = 8.00
+		prerequisite = {
+			focus = american_protection_plans_36
+		}
+		x = 10
+		y = 4
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = defend_against_mexico_41
+		icon = GFX_goal_generic_political_pressure
+		cost = 8.00
+		prerequisite = {
+			focus = defend_confederate_border_39
+		}
+		x = 10
+		y = 5
+			ai_will_do = {
+					factor = 30
+				}
+
+	}
+	focus = {
+		id = northamerican_neighbors_7
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers
+		cost = 9.00
+		prerequisite = {
+			focus = westcoast_rule_0
+		}
+		x = 11
+		y = 1
+			ai_will_do = {
+					factor = 50
+				}
+			completion_reward = {
+					add_political_power = 20
+				}
+
+	}
+	focus = {
+		id = deal_with_canada_9
+		icon = GFX_focus_generic_home_defense
+		cost = 5.00
+		prerequisite = {
+			focus = northamerican_neighbors_7
+		}
+		x = 13
+		y = 2
+			ai_will_do = {
+					factor = 50
+				}
+			completion_reward = {
+					add_political_power = 30
+				}
+
+	}
+	focus = {
+		id = publicly_denounce_canada_10
+		icon = GFX_goal_generic_military_deal
+		cost = 5.00
+		prerequisite = {
+			focus = deal_with_canada_9
+		}
+		mutually_exclusive = {
+			focus = send_a_friendly_delagation_to_canada_11
+		}
+		x = 13
+		y = 3
+			ai_will_do = {
+					factor = 35
+				}
+
+	}
+	focus = {
+		id = publicly_denouce_commonwealth_16
+		icon = GFX_focus_AST_never_gallipoli
+		cost = 5.00
+		prerequisite = {
+			focus = publicly_denounce_canada_10
+		}
+		x = 13
+		y = 4
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = prepare_for_war_with_canada_17
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = publicly_denouce_commonwealth_16
+		}
+		x = 13
+		y = 5
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = fordify_the_border_18
+		icon = GFX_goal_generic_defence
+		cost = 5.00
+		prerequisite = {
+			focus = prepare_for_war_with_canada_17
+		}
+		x = 9
+		y = 6
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = fordify_alaska_19
+		icon = GFX_goal_generic_defence
+		cost = 5.00
+		prerequisite = {
+			focus = prepare_for_war_with_canada_17
+		}
+		x = 11
+		y = 6
+			ai_will_do = {
+					factor = 40
+				}
+
+	}
+	focus = {
+		id = fordify_the_coast_20
+		icon = GFX_focus_generic_coastal_fort
+		cost = 5.00
+		prerequisite = {
+			focus = prepare_for_war_with_canada_17
+		}
+		x = 13
+		y = 6
+			ai_will_do = {
+					factor = 30
+				}
+
+	}
+	focus = {
+		id = fortifiy_the_islands_138
+		icon = GFX_focus_generic_coastal_fort
+		cost = 5.00
+		prerequisite = {
+			focus = fordify_the_coast_20
+		}
+		x = 13
+		y = 7
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = war_with_the_commonwealth_21
+		icon = GFX_focus_AST_never_gallipoli
+		cost = 4.00
+		prerequisite = {
+			focus = fordify_alaska_19
+		}
+		prerequisite = {
+			focus = fordify_the_coast_20
+		}
+		prerequisite = {
+			focus = fordify_the_border_18
+		}
+		x = 11
+		y = 7
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = mobalize_the_workforce_30
+		icon = GFX_goal_generic_construction
+		cost = 7.00
+		prerequisite = {
+			focus = war_with_the_commonwealth_21
+		}
+		x = 13
+		y = 8
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = enlist_more_military_workers_31
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 9.00
+		prerequisite = {
+			focus = mobalize_the_workforce_30
+		}
+		x = 13
+		y = 9
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = send_a_friendly_delagation_to_canada_11
+		icon = GFX_goal_continuous_increase_nu
+		cost = 5.00
+		prerequisite = {
+			focus = deal_with_canada_9
+		}
+		mutually_exclusive = {
+			focus = publicly_denounce_canada_10
+		}
+		x = 15
+		y = 3
+			ai_will_do = {
+					factor = 60
+				}
+
+	}
+	focus = {
+		id = protect_canada_12
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = send_a_friendly_delagation_to_canada_11
+		}
+		x = 15
+		y = 4
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = strengthen_ties_with_the_commonwealth_13
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 5.00
+		prerequisite = {
+			focus = protect_canada_12
+		}
+		x = 15
+		y = 5
+			ai_will_do = {
+					factor = 90
+				}
+
+	}
+	focus = {
+		id = accept_canadian_workers_14
+		icon = GFX_goal_generic_production
+		cost = 8.00
+		prerequisite = {
+			focus = strengthen_ties_with_the_commonwealth_13
+		}
+		mutually_exclusive = {
+			focus = accept_british_workers_15
+		}
+		x = 15
+		y = 6
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = propect_for_oil_22
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = accept_canadian_workers_14
+		}
+		x = 15
+		y = 7
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = canadian_workers_union_25
+		icon = GFX_goal_generic_soviet_construction
+		cost = 15.00
+		prerequisite = {
+			focus = propect_for_oil_22
+		}
+		x = 15
+		y = 8
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = accept_british_workers_15
+		icon = GFX_goal_continuous_repairments
+		cost = 8.00
+		prerequisite = {
+			focus = strengthen_ties_with_the_commonwealth_13
+		}
+		mutually_exclusive = {
+			focus = accept_canadian_workers_14
+		}
+		x = 17
+		y = 6
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = deeper_steel_mines_23
+		icon = GFX_goal_generic_production2
+		cost = 10.00
+		prerequisite = {
+			focus = accept_british_workers_15
+		}
+		x = 17
+		y = 7
+			ai_will_do = {
+					factor = 30
+				}
+
+	}
+	focus = {
+		id = british_workers_union_24
+		icon = GFX_goal_generic_soviet_construction
+		cost = 15.00
+		prerequisite = {
+			focus = deeper_steel_mines_23
+		}
+		x = 17
+		y = 8
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = deal_with_mexico_8
+		icon = GFX_focus_generic_little_entente
+		cost = 5.00
+		prerequisite = {
+			focus = northamerican_neighbors_7
+		}
+		x = 24
+		y = 2
+			ai_will_do = {
+					factor = 50
+				}
+			completion_reward = {
+					add_political_power = 30
+				}
+
+	}
+	focus = {
+		id = support_the_mexicans_59
+		icon = GFX_focus_AST_squander_bug
+		cost = 5.00
+		prerequisite = {
+			focus = deal_with_mexico_8
+		}
+		mutually_exclusive = {
+			focus = finish_off_the_mexicans_58
+		}
+		x = 21
+		y = 3
+			ai_will_do = {
+					factor = 30
+				}
+
+	}
+	focus = {
+		id = send_friendly_delagation_63
+		icon = GFX_goal_generic_improve_relations
+		cost = 5.00
+		prerequisite = {
+			focus = support_the_mexicans_59
+		}
+		x = 21
+		y = 4
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = protect_mexican_independance_64
+		icon = GFX_goal_anschluss
+		cost = 7.00
+		prerequisite = {
+			focus = send_friendly_delagation_63
+		}
+		x = 19
+		y = 5
+			ai_will_do = {
+					factor = 80
+				}
+
+	}
+	focus = {
+		id = share_american_industry_93
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 7.00
+		prerequisite = {
+			focus = send_friendly_delagation_63
+		}
+		x = 21
+		y = 5
+			ai_will_do = {
+					factor = 40
+				}
+
+	}
+	focus = {
+		id = defend_mexico_city_94
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = share_american_industry_93
+		}
+		x = 21
+		y = 6
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = send_american_researchers_95
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = defend_mexico_city_94
+		}
+		x = 21
+		y = 7
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = finish_off_the_mexicans_58
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 5.00
+		prerequisite = {
+			focus = deal_with_mexico_8
+		}
+		mutually_exclusive = {
+			focus = support_the_mexicans_59
+			focus = work_with_mexico_60
+		}
+		x = 24
+		y = 3
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = denounce_mexican_ways_61
+		icon = GFX_goal_generic_military_deal
+		cost = 5.00
+		prerequisite = {
+			focus = finish_off_the_mexicans_58
+		}
+		x = 24
+		y = 4
+			ai_will_do = {
+					factor = 90
+				}
+
+	}
+	focus = {
+		id = demand_mexico_city_62
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 8.00
+		prerequisite = {
+			focus = denounce_mexican_ways_61
+		}
+		x = 24
+		y = 5
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = establish_claims_and_ambitions_125
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 12.00
+		prerequisite = {
+			focus = demand_mexico_city_62
+		}
+		x = 24
+		y = 6
+			ai_will_do = {
+					factor = 80
+				}
+
+	}
+	focus = {
+		id = prepare_for_war_126
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = establish_claims_and_ambitions_125
+		}
+		x = 24
+		y = 7
+			ai_will_do = {
+					factor = 90
+				}
+
+	}
+	focus = {
+		id = war_plan_green_127
+		icon = GFX_goal_generic_territory_or_war
+		cost = 7.00
+		prerequisite = {
+			focus = prepare_for_war_126
+		}
+		x = 24
+		y = 8
+			ai_will_do = {
+					factor = 65
+				}
+
+	}
+	focus = {
+		id = establish_our_new_union_123
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = the_west_united_122
+		}
+		x = 30
+		y = 17
+
+	}
+	focus = {
+		id = british_common_wealth_128
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = establish_our_new_union_123
+		}
+		mutually_exclusive = {
+			focus = europe_129
+		}
+		x = 26
+		y = 18
+
+	}
+	focus = {
+		id = work_with_mexico_60
+		icon = GFX_goal_generic_construction2
+		cost = 0.00
+		prerequisite = {
+			focus = deal_with_mexico_8
+		}
+		mutually_exclusive = {
+			focus = finish_off_the_mexicans_58
+		}
+		x = 27
+		y = 3
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = share_industry_technolgies_65
+		icon = GFX_focus_research
+		cost = 8.00
+		prerequisite = {
+			focus = work_with_mexico_60
+		}
+		x = 27
+		y = 4
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = welcome_mexican_imigrants_66
+		icon = GFX_goal_anschluss
+		cost = 8.00
+		prerequisite = {
+			focus = share_industry_technolgies_65
+		}
+		x = 27
+		y = 5
+			ai_will_do = {
+					factor = 80
+				}
+
+	}
+	focus = {
+		id = enlist_mexicans_into_the_military_67
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 7.00
+		prerequisite = {
+			focus = welcome_mexican_imigrants_66
+		}
+		mutually_exclusive = {
+			focus = enlist_mexicans_into_the_navy_68
+		}
+		x = 27
+		y = 6
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = train_mexican_soliders_86
+		icon = GFX_goal_unknown
+		cost = 9.00
+		prerequisite = {
+			focus = enlist_mexicans_into_the_military_67
+		}
+		x = 27
+		y = 7
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = improve_army_training_techniques_87
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = train_mexican_soliders_86
+		}
+		x = 27
+		y = 8
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = mexican_army_techniques_88
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = improve_army_training_techniques_87
+		}
+		x = 27
+		y = 9
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = mexican_army_influence_89
+		icon = GFX_goal_unknown
+		cost = 7.00
+		prerequisite = {
+			focus = mexican_army_techniques_88
+		}
+		x = 27
+		y = 10
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = enlist_mexicans_into_the_navy_68
+		icon = GFX_goal_unknown
+		cost = 7.00
+		prerequisite = {
+			focus = welcome_mexican_imigrants_66
+		}
+		mutually_exclusive = {
+			focus = enlist_mexicans_into_the_airforce_69
+			focus = enlist_mexicans_into_the_military_67
+		}
+		x = 29
+		y = 6
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = train_mexican_sailers_82
+		icon = GFX_goal_unknown
+		cost = 9.00
+		prerequisite = {
+			focus = enlist_mexicans_into_the_navy_68
+		}
+		x = 29
+		y = 7
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = revise_training_program_83
+		icon = GFX_goal_unknown
+		cost = 6.00
+		prerequisite = {
+			focus = train_mexican_sailers_82
+		}
+		x = 29
+		y = 8
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = mexican_naval_techniques_84
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = revise_training_program_83
+		}
+		x = 29
+		y = 9
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = mexican_naval_influence_85
+		icon = GFX_goal_unknown
+		cost = 7.00
+		prerequisite = {
+			focus = mexican_naval_techniques_84
+		}
+		x = 29
+		y = 10
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = enlist_mexicans_into_the_airforce_69
+		icon = GFX_goal_unknown
+		cost = 7.00
+		prerequisite = {
+			focus = welcome_mexican_imigrants_66
+		}
+		mutually_exclusive = {
+			focus = enlist_mexicans_into_the_navy_68
+		}
+		x = 31
+		y = 6
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = train_mexican_recruits_78
+		icon = GFX_goal_unknown
+		cost = 9.00
+		prerequisite = {
+			focus = enlist_mexicans_into_the_airforce_69
+		}
+		x = 31
+		y = 7
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = improve_airforce_program_79
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = train_mexican_recruits_78
+		}
+		x = 31
+		y = 8
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = mexican_airforce_techniques_80
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = improve_airforce_program_79
+		}
+		x = 31
+		y = 9
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = mexican_airforce_influence_81
+		icon = GFX_goal_unknown
+		cost = 7.00
+		prerequisite = {
+			focus = mexican_airforce_techniques_80
+		}
+		x = 31
+		y = 10
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = the_americas_2
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 5.00
+		prerequisite = {
+			focus = political_address_1
+		}
+		x = 36
+		y = 1
+			ai_will_do = {
+					factor = 50
+				}
+			completion_reward = {
+					add_political_power = 50
+				}
+
+	}
+	focus = {
+		id = send_a_declaration_of_friendship_139
+		icon = GFX_goal_generic_improve_relations
+		cost = 5.00
+		prerequisite = {
+			focus = the_americas_2
+		}
+		mutually_exclusive = {
+			focus = assert_american_claims_and_ambitions_140
+		}
+		x = 35
+		y = 2
+			ai_will_do = {
+					factor = 40
+				}
+
+	}
+	focus = {
+		id = befriend_other_americas_143
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = send_a_declaration_of_friendship_139
+		}
+		x = 35
+		y = 3
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = protect_north_american_minors_145
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = befriend_other_americas_143
+		}
+		x = 33
+		y = 4
+			ai_will_do = {
+					factor = 90
+				}
+
+	}
+	focus = {
+		id = befriend_south_america_144
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = befriend_other_americas_143
+		}
+		x = 35
+		y = 4
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = welcome_all_diplomats_147
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = befriend_south_america_144
+		}
+		x = 35
+		y = 5
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = hire_mexican_workers_70
+		icon = GFX_goal_unknown
+		cost = 7.00
+		prerequisite = {
+			focus = welcome_mexican_imigrants_66
+		}
+		x = 33
+		y = 6
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = civilian_concern_72
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = hire_mexican_workers_70
+		}
+		x = 35
+		y = 7
+			ai_will_do = {
+					factor = 60
+				}
+
+	}
+	focus = {
+		id = support_civilian_needs_74
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = civilian_concern_72
+		}
+		mutually_exclusive = {
+			focus = improve_military_industry_73
+		}
+		x = 35
+		y = 8
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = finialize_civilian_industry_78
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = support_civilian_needs_74
+		}
+		x = 35
+		y = 9
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = assert_american_claims_and_ambitions_140
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = the_americas_2
+		}
+		mutually_exclusive = {
+			focus = send_a_declaration_of_friendship_139
+		}
+		x = 37
+		y = 2
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = threaten_south_america_141
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = assert_american_claims_and_ambitions_140
+		}
+		x = 37
+		y = 3
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = threaten_north_america_142
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = threaten_south_america_141
+		}
+		x = 37
+		y = 4
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = europe_nations_3
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5.00
+		prerequisite = {
+			focus = political_address_1
+		}
+		x = 41
+		y = 1
+			ai_will_do = {
+					factor = 70
+				}
+			completion_reward = {
+					add_political_power = 50
+				}
+
+	}
+	focus = {
+		id = concern_of_the_british_148
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = europe_nations_3
+		}
+		x = 40
+		y = 2
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = provoke_british_diplomats_152
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = concern_of_the_british_148
+		}
+		mutually_exclusive = {
+			focus = address_british_power_151
+		}
+		x = 40
+		y = 3
+			ai_will_do = {
+					factor = 50
+				}
+			completion_reward = {
+					add_political_power = 15
+				}
+
+	}
+	focus = {
+		id = sanction_british_actions_153
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = provoke_british_diplomats_152
+		}
+		x = 40
+		y = 4
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = embargo_the_british_156
+		icon = GFX_goal_generic_trade
+		cost = 5.00
+		prerequisite = {
+			focus = sanction_british_actions_153
+		}
+		x = 38
+		y = 5
+
+	}
+	focus = {
+		id = americanbritish_congress_of_37_154
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = sanction_british_actions_153
+		}
+		x = 40
+		y = 5
+
+	}
+	focus = {
+		id = influence_british_politics_158
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = americanbritish_congress_of_37_154
+		}
+		x = 40
+		y = 6
+
+	}
+	focus = {
+		id = embargo_the_empire_157
+		icon = GFX_goal_generic_trade
+		cost = 5.00
+		prerequisite = {
+			focus = embargo_the_british_156
+		}
+		x = 38
+		y = 6
+
+	}
+	focus = {
+		id = american_act_of_war_155
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = influence_british_politics_158
+		}
+		prerequisite = {
+			focus = embargo_the_empire_157
+		}
+		x = 40
+		y = 7
+
+	}
+	focus = {
+		id = strike_the_heart_159
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = american_act_of_war_155
+		}
+		x = 40
+		y = 8
+
+	}
+	focus = {
+		id = anit_british_propaganda_162
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = strike_the_heart_159
+		}
+		x = 40
+		y = 9
+
+	}
+	focus = {
+		id = prepare_for_a_cross_atlantic_war_163
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = anit_british_propaganda_162
+		}
+		x = 40
+		y = 10
+
+	}
+	focus = {
+		id = sabotage_british_industry_166
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = prepare_for_a_cross_atlantic_war_163
+		}
+		x = 40
+		y = 11
+
+	}
+	focus = {
+		id = war_plan_red_161
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = sabotage_british_industry_166
+		}
+		x = 40
+		y = 12
+
+	}
+	focus = {
+		id = attack_the_heads_160
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = american_act_of_war_155
+		}
+		x = 43
+		y = 8
+
+	}
+	focus = {
+		id = strike_the_closest_167
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = attack_the_heads_160
+		}
+		x = 42
+		y = 9
+
+	}
+	focus = {
+		id = assert_claims_in_western_canada_170
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = strike_the_closest_167
+		}
+		x = 42
+		y = 10
+
+	}
+	focus = {
+		id = warn_the_canadians_172
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = assert_claims_in_western_canada_170
+		}
+		x = 42
+		y = 11
+
+	}
+	focus = {
+		id = cross_the_pacific_168
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = attack_the_heads_160
+		}
+		x = 44
+		y = 9
+
+	}
+	focus = {
+		id = sancation_pacific_colonies_169
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = cross_the_pacific_168
+		}
+		x = 44
+		y = 10
+
+	}
+	focus = {
+		id = prepare_pearl_harbor_171
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = sancation_pacific_colonies_169
+		}
+		x = 44
+		y = 11
+
+	}
+	focus = {
+		id = embargo_the_colonies_173
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = prepare_pearl_harbor_171
+		}
+		prerequisite = {
+			focus = warn_the_canadians_172
+		}
+		x = 43
+		y = 12
+
+	}
+	focus = {
+		id = address_british_power_151
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = concern_of_the_british_148
+		}
+		mutually_exclusive = {
+			focus = provoke_british_diplomats_152
+		}
+		x = 47
+		y = 3
+			ai_will_do = {
+					factor = 30
+				}
+			completion_reward = {
+					add_political_power = 15
+				}
+
+	}
+	focus = {
+		id = send_a_friendly_delagation_175
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = address_british_power_151
+		}
+		x = 47
+		y = 4
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = introduce_american_industry_178
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = send_a_friendly_delagation_175
+		}
+		x = 45
+		y = 5
+
+	}
+	focus = {
+		id = share_america_research_177
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = send_a_friendly_delagation_175
+		}
+		x = 47
+		y = 5
+
+	}
+	focus = {
+		id = combine_our_research_teams_182
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = share_america_research_177
+		}
+		x = 47
+		y = 6
+
+	}
+	focus = {
+		id = invest_in_infantry_research_183
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = combine_our_research_teams_182
+		}
+		x = 47
+		y = 7
+
+	}
+	focus = {
+		id = share_american_military_techniques_184
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = invest_in_infantry_research_183
+		}
+		x = 47
+		y = 8
+
+	}
+	focus = {
+		id = welcome_british_immigrants_176
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = send_a_friendly_delagation_175
+		}
+		x = 49
+		y = 5
+
+	}
+	focus = {
+		id = welcome_colonial_immigrants_181
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = welcome_british_immigrants_176
+		}
+		x = 49
+		y = 6
+
+	}
+	focus = {
+		id = put_immigrants_to_work_185
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = welcome_colonial_immigrants_181
+		}
+		x = 49
+		y = 7
+
+	}
+	focus = {
+		id = enlist_immigrant_to_the_army_186
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = put_immigrants_to_work_185
+		}
+		x = 49
+		y = 8
+
+	}
+	focus = {
+		id = lower_taxes_for_british_179
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = welcome_british_immigrants_176
+		}
+		x = 51
+		y = 6
+
+	}
+	focus = {
+		id = declare_british_immunity_180
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = lower_taxes_for_british_179
+		}
+		x = 51
+		y = 7
+
+	}
+	focus = {
+		id = enlist_immigrant_to_the_navy_187
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = put_immigrants_to_work_185
+		}
+		x = 51
+		y = 8
+
+	}
+	focus = {
+		id = anti_commonwealth_propaganda_26
+		icon = GFX_goal_generic_propaganda
+		cost = 5.00
+		prerequisite = {
+			focus = war_with_the_commonwealth_21
+		}
+		x = 11
+		y = 8
+			ai_will_do = {
+					factor = 80
+				}
+
+	}
+	focus = {
+		id = war_logistics_27
+		icon = GFX_goal_generic_position_armies
+		cost = 7.00
+		prerequisite = {
+			focus = war_with_the_commonwealth_21
+		}
+		x = 9
+		y = 8
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = better_supply_techniques_28
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 9.00
+		prerequisite = {
+			focus = war_logistics_27
+		}
+		x = 9
+		y = 9
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = enlist_defectors_29
+		icon = GFX_goal_generic_small_arms
+		cost = 9.00
+		prerequisite = {
+			focus = anti_commonwealth_propaganda_26
+		}
+		x = 11
+		y = 9
+			ai_will_do = {
+					factor = 30
+				}
+
+	}
+	focus = {
+		id = begin_coring_the_canadian_region_32
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = enlist_defectors_29
+		}
+		prerequisite = {
+			focus = better_supply_techniques_28
+		}
+		prerequisite = {
+			focus = enlist_more_military_workers_31
+		}
+		x = 11
+		y = 10
+			ai_will_do = {
+					factor = 80
+				}
+			completion_reward = {
+					add_political_power = -100
+				}
+
+	}
+	focus = {
+		id = core_canadian_land_33
+		icon = GFX_goal_unknown
+		cost = 15.00
+		prerequisite = {
+			focus = begin_coring_the_canadian_region_32
+		}
+		x = 11
+		y = 11
+			ai_will_do = {
+					factor = 80
+				}
+			completion_reward = {
+					add_political_power = -200
+				}
+
+	}
+	focus = {
+		id = military_industry_construction_71
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = hire_mexican_workers_70
+		}
+		x = 33
+		y = 7
+			ai_will_do = {
+					factor = 40
+				}
+
+	}
+	focus = {
+		id = improve_military_industry_73
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = military_industry_construction_71
+		}
+		mutually_exclusive = {
+			focus = support_civilian_needs_74
+		}
+		x = 33
+		y = 8
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = finalize_military_industry_77
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = improve_military_industry_73
+		}
+		x = 33
+		y = 9
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = mexican_workers_union_77
+		icon = GFX_goal_unknown
+		cost = 12.00
+		prerequisite = {
+			focus = finalize_military_industry_77
+			focus = finialize_civilian_industry_78
+		}
+		x = 34
+		y = 10
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = mexico_influencing_our_country_90
+		icon = GFX_goal_unknown
+		cost = 15.00
+		prerequisite = {
+			focus = mexican_workers_union_77
+		}
+		prerequisite = {
+			focus = mexican_army_influence_89
+		}
+		x = 30
+		y = 11
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = share_military_technologies_91
+		icon = GFX_goal_generic_small_arms
+		cost = 8.00
+		prerequisite = {
+			focus = protect_mexican_independance_64
+		}
+		x = 19
+		y = 6
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = entact_mexicanamerican_pact_92
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = share_military_technologies_91
+		}
+		x = 19
+		y = 7
+			ai_will_do = {
+					factor = 60
+				}
+
+	}
+	focus = {
+		id = discuss_americanmexican_relations_96
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = send_american_researchers_95
+		}
+		prerequisite = {
+			focus = entact_mexicanamerican_pact_92
+		}
+		x = 20
+		y = 8
+			ai_will_do = {
+					factor = 50
+				}
+
+	}
+	focus = {
+		id = propose_americanmexican_military_alliance_97
+		icon = GFX_goal_unknown
+		cost = 20.00
+		prerequisite = {
+			focus = discuss_americanmexican_relations_96
+		}
+		x = 20
+		y = 9
+			ai_will_do = {
+					factor = 40
+				}
+
+	}
+	focus = {
+		id = aim_for_central_america_98
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = propose_americanmexican_military_alliance_97
+		}
+		mutually_exclusive = {
+			focus = aim_for_south_america_99
+		}
+		x = 18
+		y = 10
+
+	}
+	focus = {
+		id = aim_for_south_america_99
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = propose_americanmexican_military_alliance_97
+		}
+		mutually_exclusive = {
+			focus = aim_for_central_america_98
+		}
+		x = 22
+		y = 10
+
+	}
+	focus = {
+		id = improve_relations_with_southamerican_powers_100
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = aim_for_south_america_99
+		}
+		mutually_exclusive = {
+			focus = threaten_southamerican_minors_102
+		}
+		x = 21
+		y = 11
+
+	}
+	focus = {
+		id = threaten_southamerican_powers_101
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = aim_for_south_america_99
+		}
+		mutually_exclusive = {
+			focus = threaten_southamerican_minors_102
+		}
+		x = 25
+		y = 11
+
+	}
+	focus = {
+		id = threaten_southamerican_minors_102
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = aim_for_south_america_99
+		}
+		mutually_exclusive = {
+			focus = improve_relations_with_southamerican_powers_100
+			focus = threaten_southamerican_powers_101
+		}
+		x = 23
+		y = 11
+
+	}
+	focus = {
+		id = denounce_southamerican_powers_103
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = threaten_southamerican_powers_101
+		}
+		x = 25
+		y = 12
+
+	}
+	focus = {
+		id = intervene_in_southamerican_politics_104
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = denounce_southamerican_powers_103
+		}
+		mutually_exclusive = {
+			focus = dominate_south_america_105
+		}
+		x = 25
+		y = 13
+
+	}
+	focus = {
+		id = dominate_south_america_105
+		icon = GFX_goal_unknown
+		cost = 12.00
+		prerequisite = {
+			focus = denounce_southamerican_powers_103
+		}
+		mutually_exclusive = {
+			focus = intervene_in_southamerican_politics_104
+		}
+		x = 27
+		y = 13
+
+	}
+	focus = {
+		id = put_south_america_to_work_106
+		icon = GFX_goal_unknown
+		cost = 16.00
+		prerequisite = {
+			focus = dominate_south_america_105
+		}
+		x = 27
+		y = 14
+
+	}
+	focus = {
+		id = install_american_politics_107
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = intervene_in_southamerican_politics_104
+		}
+		x = 25
+		y = 14
+
+	}
+	focus = {
+		id = demand_minor_land_108
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = threaten_southamerican_minors_102
+		}
+		x = 23
+		y = 12
+
+	}
+	focus = {
+		id = put_minors_to_work_109
+		icon = GFX_goal_unknown
+		cost = 12.00
+		prerequisite = {
+			focus = demand_minor_land_108
+		}
+		x = 23
+		y = 13
+
+	}
+	focus = {
+		id = protect_south_american_nations_110
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = improve_relations_with_southamerican_powers_100
+		}
+		x = 21
+		y = 12
+
+	}
+	focus = {
+		id = trade_with_south_american_nations_111
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = protect_south_american_nations_110
+		}
+		x = 20
+		y = 13
+
+	}
+	focus = {
+		id = invite_brazil_112
+		icon = GFX_goal_unknown
+		cost = 12.00
+		prerequisite = {
+			focus = invite_argentina_115
+			focus = invite_peru_113
+			focus = invite_venazula_114
+		}
+		x = 21
+		y = 15
+
+	}
+	focus = {
+		id = invite_peru_113
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = protect_south_american_nations_110
+		}
+		x = 20
+		y = 14
+
+	}
+	focus = {
+		id = invite_venazula_114
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = protect_south_american_nations_110
+		}
+		x = 18
+		y = 14
+
+	}
+	focus = {
+		id = invite_argentina_115
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = protect_south_american_nations_110
+		}
+		x = 22
+		y = 14
+
+	}
+	focus = {
+		id = protect_central_america_116
+		icon = GFX_goal_unknown
+		cost = 7.00
+		prerequisite = {
+			focus = aim_for_central_america_98
+		}
+		mutually_exclusive = {
+			focus = threaten_central_america_118
+		}
+		x = 19
+		y = 11
+
+	}
+	focus = {
+		id = trade_with_central_america_117
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = protect_central_america_116
+		}
+		x = 19
+		y = 12
+
+	}
+	focus = {
+		id = threaten_central_america_118
+		icon = GFX_goal_unknown
+		cost = 7.00
+		prerequisite = {
+			focus = aim_for_central_america_98
+		}
+		mutually_exclusive = {
+			focus = protect_central_america_116
+		}
+		x = 17
+		y = 11
+
+	}
+	focus = {
+		id = invite_central_america_119
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = trade_with_central_america_117
+		}
+		x = 18
+		y = 13
+
+	}
+	focus = {
+		id = one_clean_sweep_120
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = threaten_central_america_118
+		}
+		x = 17
+		y = 12
+
+	}
+	focus = {
+		id = the_west_as_one_121
+		icon = GFX_goal_unknown
+		cost = 20.00
+		prerequisite = {
+			focus = put_minors_to_work_109
+		}
+		prerequisite = {
+			focus = one_clean_sweep_120
+		}
+		x = 21
+		y = 16
+			completion_reward = {
+					remove_ideas = america_devided
+				}
+
+	}
+	focus = {
+		id = establish_our_new_country_124
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = the_west_as_one_121
+		}
+		x = 21
+		y = 17
+
+	}
+	focus = {
+		id = europe_129
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = establish_our_new_union_123
+		}
+		mutually_exclusive = {
+			focus = british_common_wealth_128
+			focus = asia_130
+		}
+		x = 30
+		y = 18
+
+	}
+	focus = {
+		id = asia_130
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = establish_our_new_union_123
+		}
+		mutually_exclusive = {
+			focus = europe_129
+		}
+		x = 34
+		y = 18
+
+	}
+	focus = {
+		id = european_powers_131
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = europe_129
+		}
+		x = 30
+		y = 19
+
+	}
+	focus = {
+		id = asian_powers_132
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = asia_130
+		}
+		x = 34
+		y = 19
+
+	}
+	focus = {
+		id = united_kingdom_133
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = british_common_wealth_128
+		}
+		x = 26
+		y = 19
+
+	}
+	focus = {
+		id = europe_134
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = establish_our_new_country_124
+		}
+		x = 21
+		y = 18
+
+	}
+	focus = {
+		id = asia_135
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = establish_our_new_country_124
+		}
+		x = 24
+		y = 18
+
+	}
+	focus = {
+		id = remaining_allies_136
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = establish_our_new_country_124
+		}
+		x = 18
+		y = 18
+
+	}
+	focus = {
+		id = to_conquer_all_137
+		icon = GFX_goal_unknown
+		cost = 15.00
+		prerequisite = {
+			focus = europe_134
+		}
+		prerequisite = {
+			focus = remaining_allies_136
+		}
+		prerequisite = {
+			focus = asia_135
+		}
+		x = 21
+		y = 19
+
+	}
+	focus = {
+		id = protect_south_american_minors_146
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5.00
+		prerequisite = {
+			focus = befriend_south_america_144
+		}
+		x = 33
+		y = 5
+			ai_will_do = {
+					factor = 70
+				}
+
+	}
+	focus = {
+		id = fortify_the_coast_164
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = prepare_for_a_cross_atlantic_war_163
+		}
+		x = 38
+		y = 11
+
+	}
+	focus = {
+		id = fortify_the_islands_165
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = fortify_the_coast_164
+		}
+		x = 38
+		y = 12
+
+	}
+	focus = {
+		id = war_plan_pink_174
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = embargo_the_colonies_173
+		}
+		x = 43
+		y = 13
+
+	}
+	focus = {
+		id = enlist_immigrant_to_the_airforce_188
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = put_immigrants_to_work_185
+		}
+		x = 53
+		y = 8
+
+	}
+	focus = {
+		id = share_industry_techniques_and_research_189
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = introduce_american_industry_178
+		}
+		x = 45
+		y = 6
+
+	}
+	focus = {
+		id = invest_more_in_industry_189
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = share_industry_techniques_and_research_189
+		}
+		x = 45
+		y = 8
+
+	}
+	focus = {
+		id = apply_to_join_the_allies_190
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = share_american_military_techniques_184
+			focus = invest_more_in_industry_189
+			focus = enlist_immigrant_to_the_army_186
+			focus = enlist_immigrant_to_the_airforce_188
+			focus = enlist_immigrant_to_the_navy_187
+		}
+		x = 48
+		y = 9
+
+	}
+}

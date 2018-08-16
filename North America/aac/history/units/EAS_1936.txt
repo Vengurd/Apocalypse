@@ -1,0 +1,579 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Infantry Division"  	# Standard formation for frontline divisions
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  # US Hvy Field Arty consisted of 2 Bns, 155mm howitzers
+		engineer = { x = 0 y = 1 }   # US Eng Rgt consisted of 2 Bns
+	}
+}
+division_template = {
+	name = "National Guard Division"  	# Standard formation for NG divisions through late 1940
+
+	regiments = {						
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  # US Hvy Field Arty consisted of 2 Bns, 155mm howitzers
+		engineer = { x = 0 y = 1 }   # US Eng Rgt consisted of 2 Bns
+	}
+}
+division_template = {
+	name = "Cavalry Division"  		# 1st Cavalry Division only
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # US Cav Recon consisted of 52 ACs, 13 L Arm
+		engineer = { x = 0 y = 1 }   # US Eng Bn
+	}
+}
+division_template = {
+	name = "Garrison Brigade"  		# used for island defense (older equipment, lower experience)
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+	priority = 0
+}
+
+###### OOB ######
+units = {					
+	### 4th Army -- note: Armies only paper organizations in 1936 ###		
+	# IX Army Corps (CO: DeWitt) #
+	division= {			
+		name = "3rd 'Rock of the Marne' Division"		
+		location = 9671
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}			
+	division = {			
+		name = "40th 'Sunshine' Division"		
+		location = 9671
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}			
+	division= {			
+		name = "41st 'Sunset' Division"		
+		location = 9671
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}	
+	####### Pacific Theater	#######
+	### Alaska Defense Command ###
+	division = {			
+		name = "Alaska Defense Command"		
+		location = 13091
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+
+	}			
+	division= {			
+		name = "Attu Island Garrison"		
+		location = 13067
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}
+			
+	### Hawaiian Department ###
+	division = {			
+		name = "Hawaiian Division"		
+		location = 4180
+		division_template = "National Guard Division"		# older equipment, less training than NG division
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	# North Pacific Defenses #
+	division= {				
+		name = "Midway Island Garrison"			
+		location = 13052
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}				
+	division= {				
+		name = "Wake Island Garrison"			
+		location = 13047
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}				
+	division= {				
+		name = "Guam Garrison"			
+		location = 12140
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}				
+	
+	# South Pacific Defenses #
+	division= {			
+		name = "Christmas Island Garrison"		
+		location = 13048
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}			
+	division= {			
+		name = "Jarvis Island Garrison"		
+		location = 13049
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}			
+	division= {			
+		name = "Palmyra Garrison"		
+		location = 13050
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}			
+	division= {			
+		name = "Phoenix Island Garrison"		
+		location = 13053
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}			
+	division= {			
+		name = "Johnston Island Garrison"		
+		location = 13051
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}			
+
+	### U.S. Army Forces in the Far East ###		
+	division = {										
+		name = "Philippine Division"			
+		location = 10265
+		division_template = "Infantry Division"			# older equipment, less training than NG division
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "2a División de Infantería"
+		location = 1892 # Baja
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division= {	
+		name = "3a División de Infantería"
+		location = 13089 # Guadalajara
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+
+
+	##### NAVAL UNITS #####
+	### PACIFIC FLEET -- San Diego
+	navy = {					
+		name = "Battleship Division 1"				
+		base = 1562
+		location = 1562 # San Diego
+		ship = { name = "USS Nevada" definition = battleship equipment = { battleship_1 = { amount = 1 owner = EAS version_name = "Pennsylvania Class" } } }				
+		ship = { name = "USS Arizona" definition = battleship equipment = { battleship_1 = { amount = 1 owner = EAS version_name = "Pennsylvania Class" } } }				
+		ship = { name = "USS Pennsylvania" definition = battleship equipment = { battleship_1 = { amount = 1 owner = EAS version_name = "Pennsylvania Class" } } }				
+	}					
+	navy = {					
+		name = "Battleship Division 2"				
+		base = 1562
+		location = 1562 # San Diego
+		ship = { name = "USS Oklahoma" definition = battleship equipment = { battleship_1 = { amount = 1 owner = EAS version_name = "Pennsylvania Class" } } }				
+		ship = { name = "USS Tennessee" definition = battleship equipment = { battleship_1 = { amount = 1 owner = EAS version_name = "New Mexico Class" } } }				
+		ship = { name = "USS California" definition = battleship equipment = { battleship_1 = { amount = 1 owner = EAS version_name = "New Mexico Class" } } }				
+	}					
+	navy = {					
+		name = "Battleship Division 4"				
+		base = 1562
+		location = 1562 # San Diego
+		ship = { name = "USS Colorado" definition = battleship equipment = { battleship_1 = { amount = 1 owner = EAS version_name = "Colorado Class" } } }				
+		ship = { name = "USS West Virginia" definition = battleship equipment = { battleship_1 = { amount = 1 owner = EAS version_name = "Colorado Class" } } }				
+		ship = { name = "USS Maryland" definition = battleship equipment = { battleship_1 = { amount = 1 owner = EAS version_name = "Colorado Class" } } }				
+	}				
+	navy = {					
+		name = "Carrier Division"				
+		base = 1562
+		location = 1562 # San Diego
+		ship = { name = "USS Lexington" definition = carrier equipment = { carrier_1 = { amount = 1 owner = EAS } } 
+			air_wings = {
+				cv_fighter_equipment_0 =  { owner = "EAS" amount = 8 } # historical: 16
+				cv_CAS_equipment_1 =  { owner = "EAS" amount = 14 } # historical: 30
+				cv_nav_bomber_equipment_1 =  { owner = "EAS" amount = 8 } # historical: 12
+			}
+		}
+		ship = { name = "USS Saratoga" definition = carrier equipment = { carrier_1 = { amount = 1 owner = EAS } } 
+			air_wings = {
+				cv_fighter_equipment_0 =  { owner = "EAS" amount = 8 } # historical: 16
+				cv_CAS_equipment_1 =  { owner = "EAS" amount = 14 } # historical: 30
+				cv_nav_bomber_equipment_1 =  { owner = "EAS" amount = 8 } # historical: 12
+			}
+		}
+	}					
+	navy = {					
+		name = "Cruiser Division 3"				
+		base = 1562
+		location = 1562 # San Diego
+		ship = { name = "USS Richmond" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = EAS } } }				
+		ship = { name = "USS Trenton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = EAS } } }				
+		ship = { name = "USS Concord" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = EAS } } }				
+	}					
+	navy = {					
+		name = "Cruiser Division 4"				
+		base = 1562
+		location = 1562 # San Diego
+		ship = { name = "USS Pensacola" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = EAS } } }				
+		ship = { name = "USS Salt Lake City" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = EAS } } }				
+		ship = { name = "USS Chicago" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = EAS } } }				
+		ship = { name = "USS Indianapolis" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = EAS version_name = "Portland Class" } } }				
+	}					
+	navy = {					
+		name = "Cruiser Division 5"				
+		base = 1562
+		location = 1562 # San Diego
+		ship = { name = "USS Northampton" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = EAS } } }				
+		ship = { name = "USS Chester" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = EAS } } }				
+		ship = { name = "USS Louisville" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = EAS } } }					
+		ship = { name = "USS Portland" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = EAS version_name = "Portland Class" } } }				
+	}					
+	navy = {					
+		name = "Cruiser Division 6"				
+		base = 1562
+		location = 1562 # San Diego
+		ship = { name = "USS New Orleans" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = EAS version_name = "Portland Class" } } }				
+		ship = { name = "USS Astoria" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = EAS version_name = "Portland Class" } } }				
+		ship = { name = "USS Minneapolis" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = EAS version_name = "Portland Class" } } }				
+		ship = { name = "USS San Francisco" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = EAS version_name = "Portland Class" } } }				
+	}					
+	navy = {					
+		name = "Destroyer Flotilla  1"				
+		base = 1562
+		location = 1562 # San Diego
+		ship = { name = "USS Raleigh" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = EAS } } }				
+		# 1st Destroyer Division				
+		ship = { name = "USS Dewey" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS version_name = "Farragut Class" } } }
+		ship = { name = "USS Hull" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS version_name = "Farragut Class" } } }
+		ship = { name = "USS MacDonough" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS version_name = "Farragut Class" } } }
+		ship = { name = "USS Worden" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS version_name = "Farragut Class" } } }
+		# 2nd Destroyer Division				
+		ship = { name = "USS Farragut" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS version_name = "Farragut Class" } } }
+		ship = { name = "USS Dale" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS version_name = "Farragut Class" } } }
+		ship = { name = "USS Monaghan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS version_name = "Farragut Class" } } }
+		ship = { name = "USS Aylwin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS version_name = "Farragut Class" } } }
+		# 34th Destroyer Division			
+		ship = { name = "USS Rathburne" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Talbot" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Waters" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Dent" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		# 35th Destroyer Division			
+		ship = { name = "USS Ballard" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Thornton" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Litchfield" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Zane" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Wasmuth" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+	}				
+	navy = {					
+		name = "Destroyer Flotilla  5"				
+		base = 1562
+		location = 1562 # San Diego
+		ship = { name = "USS Detroit" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = EAS } } }				
+		# 15th Destroyer Division				
+		ship = { name = "USS Hatfield" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Brooks" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Gilmer" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Fox" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Kane" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		# 16th Destroyer Division				
+		ship = { name = "USS Allen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }	
+		ship = { name = "USS Schley" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Chew" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Ward" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		# 32nd Destroyer Division				
+		ship = { name = "USS Humphreys" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS King" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Sands" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Lawrence" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		# 33rd Destroyer Division				
+		ship = { name = "USS Crane" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Kilty" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Kennison" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Crosby" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+	}					
+	navy = {					
+		name = "4th Submarine Squadron"				
+		base = 1562
+		location = 1562 # San Diego
+		# 41st Submarine Division				
+		ship = { name = "USS S-18" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS S-23" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS S-27" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS S-28" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS S-34" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS S-35" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		# 42nd Submarine Division				
+		ship = { name = "USS Argonaut" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS version_name = "Barracuda Class" } } }
+		ship = { name = "USS Narwhal" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS version_name = "Barracuda Class" } } }
+		ship = { name = "USS Nautilus" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS version_name = "Barracuda Class" } } }
+		ship = { name = "USS Dolphin" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS version_name = "Barracuda Class" } } }
+		ship = { name = "USS Cachalot" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS version_name = "Barracuda Class" } } }
+		ship = { name = "USS Cuttlefish" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS version_name = "Barracuda Class" } } }
+		# 43rd Submarine Division				
+		ship = { name = "USS Porpoise" definition = submarine equipment = { submarine_2 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS Pike" definition = submarine equipment = { submarine_2 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS Shark" definition = submarine equipment = { submarine_2 = { amount = 1 owner = EAS } } }
+	}					
+	navy = {					
+		name = "6th Submarine Squadron"				
+		base = 1562
+		location = 1562 # San Diego
+		# 61st Submarine Division				
+		ship = { name = "USS R-11" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS R-13" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS R-14" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS R-20" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS S-46" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS S-47" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS S-48" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		# 62nd Submarine Division				
+		ship = { name = "USS O-9" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS R-1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS R-3" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS S-25" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS S-26" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS S-32" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+	}					
+
+	### ASIATIC FLEET -- Manilla, PHI
+	navy = {					
+		name = "Asiatic Fleet"				
+		base = 10265
+		location = 10265 # Manilla
+		ship = { name = "USS Houston" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = EAS } } }				
+		ship = { name = "USS Marblehead" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = EAS } } }
+		# 23rd Destroyer Division				
+		ship = { name = "USS Paul Jones" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Alden" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS John D Edwards" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Whipple" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Edsall" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		# 24th Destroyer Division				
+		ship = { name = "USS Barker" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Parrott" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Bulmer" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Stewart" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		# 25th Destroyer Division				
+		ship = { name = "USS Pope" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Peary" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS Pillsbury" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+		ship = { name = "USS John D Ford" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EAS } } }		
+	}					
+	navy = {					
+		name = "2nd Submarine Squadron"				
+		base = 10265
+		location = 10265 # Manilla
+		# 21st Submarine Division				
+		ship = { name = "USS S-36" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS S-37" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS S-38" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS S-39" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS S-40" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS S-41" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		# 22nd Submarine Division				
+		ship = { name = "USS R-12" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS R-15" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS R-16" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS R-17" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS R-18" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+		ship = { name = "USS R-19" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EAS } } }
+	}
+}
+		
+air_wings = {
+	### 1 USAAF Wing -- Los Angeles
+	378 = {
+		# 7th Bombardment Group 
+		# 19th Bombardment Group 
+		tac_bomber_equipment_0 = {
+			owner = "EAS" 
+			amount = 60
+		}
+		# 17th Attack Group 
+		CAS_equipment_1 = {
+			owner = "EAS" 
+			amount = 48
+		}
+	}
+
+	### 18th Composite Wing -- Hawaii
+	629 = { 
+		# 18th Pursuit Group 
+		fighter_equipment_0 =  {
+			owner = "EAS" 
+			amount = 48
+		}
+		# 5th Composite Group 
+		tac_bomber_equipment_0 = {
+			owner = "EAS" 
+			amount = 36
+		}
+	}
+
+	### Philippines Composite Group -- Manilla
+	327 = { 
+		# 4th Composite Group 
+		fighter_equipment_0 =  {
+			owner = "EAS" 
+			amount = 36
+		}
+	}
+
+	### USN Pacific Naval Patrol Division -- San Diego
+	378 = { 
+		# Naval Patrol Wing 1 
+		# Naval Patrol Wing 2 
+		nav_bomber_equipment_1 =  {
+			owner = "EAS" 
+			amount = 72
+		}
+	}
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+		
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "EAS"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "EAS" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "EAS" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = cv_fighter_equipment_0
+			creator = "EAS" 
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+	}
+
+	### Under Construction Notes ###
+	# DD: Mahan class (x13) ("USS Porter" "USS Phelps" "USS Clark" "USS Moffett" "USS Mahan" "USS Cummings" "USS Flusser" "USS Case" "USS Conyngham" "USS Cassin" "USS Shaw" "USS Cushing" "USS Perkins")
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_1
+			creator = "EAS"
+			version_name = "Farragut Class"
+		}
+		requested_factories = 13
+		progress = 0.80
+		amount = 13
+	}
+	# SS: Porpoise class (x1) ("USS Tarpon")
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "EAS"
+		}
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+	}
+	# CA: Quincy (New Orleans class, Comm. 9-Jun, 1936)
+	add_equipment_production = {
+		equipment = {
+			type = heavy_cruiser_1
+			creator = "EAS"
+			version_name = "Portland Class"
+		}
+		requested_factories = 2
+		progress = 0.85
+		amount = 1
+	}
+}
+#####################

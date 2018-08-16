@@ -1,0 +1,19 @@
+﻿l_english:
+###Nations and such###
+# EAS_fascism:0 "San Fransisco Empire"
+ EAS_fascism:0 "Empire of the American States"
+ EAS_fascism_DEF:0 "The San Fransisco Empire"
+# EAS_democratic:0 "California States"
+ EAS_democratic:0 "American State Republic"
+ EAS_democratic_DEF:0 "The California States"
+ EAS_neutrality:0 "Pacific States"
+ EAS_neutrality_DEF:0 "The Pacific States"
+# EAS_communism:0 "Commifornia"
+ EAS_communism:0 "Union of the American States"
+ EAS_communism_DEF:0 "The Commifornia Union"
+ EAS_fascism_ADJ:0 "American"
+ EAS_democratic_ADJ:0 "American"
+ EAS_neutrality_ADJ:0 "American"
+ EAS_communism_ADJ:0 "American"
+###Leaders###
+ POLITICS_JOHN_NANCE_GARNER_DESC:0 "Southern President"
