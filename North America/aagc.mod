@@ -1,5 +1,5 @@
-name="Apocalypse: California"
-path="mod/aag/"
+name="Apocalypse - Gulf Coast"
+path="mod/aagc/"
 dependencies={
 	"Apocalypse - Core"
 }

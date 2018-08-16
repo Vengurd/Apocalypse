@@ -1,4 +1,4 @@
-name="Apocalypse: California"
+name="Apocalypse - California"
 path="mod/aawc/"
 dependencies={
 	"Apocalypse - Core"

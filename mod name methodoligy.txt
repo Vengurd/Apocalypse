@@ -1,7 +1,19 @@
 Folder names look funny since I decided to go the route of abbreviations instead of full mod names.
-Example
-AAC
+-----------
+AAWC
 -----------
 The First A is for Apocolypse.
-The Second A is for America
-The C is for California.
+The Second A is for America.
+The W is for West.
+The C is for Coast.
+-----------
+AAG
+-----------
+A for Apocolypse
+A for America
+G for Gulf
+C for Coast
+-----------
+-----------
+-----------
+-----------
